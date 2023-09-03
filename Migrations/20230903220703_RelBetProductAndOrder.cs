@@ -5,7 +5,7 @@
 namespace ITIProject.Migrations
 {
     /// <inheritdoc />
-    public partial class PKForProductOrders : Migration
+    public partial class RelBetProductAndOrder : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -22,14 +22,6 @@ namespace ITIProject.Migrations
                 name: "PK_OrderItems",
                 table: "OrderItems");
 
-            migrationBuilder.DropIndex(
-                name: "IX_OrderItems_OrderId",
-                table: "OrderItems");
-
-            migrationBuilder.DropColumn(
-                name: "Id",
-                table: "OrderItems");
-
             migrationBuilder.RenameTable(
                 name: "OrderItems",
                 newName: "ProductOrders");
@@ -39,10 +31,15 @@ namespace ITIProject.Migrations
                 table: "ProductOrders",
                 newName: "IX_ProductOrders_ProductId");
 
+            migrationBuilder.RenameIndex(
+                name: "IX_OrderItems_OrderId",
+                table: "ProductOrders",
+                newName: "IX_ProductOrders_OrderId");
+
             migrationBuilder.AddPrimaryKey(
                 name: "PK_ProductOrders",
                 table: "ProductOrders",
-                columns: new[] { "OrderId", "ProductId" });
+                column: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_ProductOrders_Orders_OrderId",
@@ -85,23 +82,15 @@ namespace ITIProject.Migrations
                 table: "OrderItems",
                 newName: "IX_OrderItems_ProductId");
 
-            migrationBuilder.AddColumn<int>(
-                name: "Id",
+            migrationBuilder.RenameIndex(
+                name: "IX_ProductOrders_OrderId",
                 table: "OrderItems",
-                type: "int",
-                nullable: false,
-                defaultValue: 0)
-                .Annotation("SqlServer:Identity", "1, 1");
+                newName: "IX_OrderItems_OrderId");
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_OrderItems",
                 table: "OrderItems",
                 column: "Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_OrderItems_OrderId",
-                table: "OrderItems",
-                column: "OrderId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_OrderItems_Orders_OrderId",

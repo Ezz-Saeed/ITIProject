@@ -53,9 +53,9 @@ namespace ITIProject.Models
                     oi => oi
                             .HasOne(oi => oi.Order)
                             .WithMany(o => o.ProductOrders)
-                            .HasForeignKey(oi => oi.OrderId),
-                    oi => oi
-                            .HasKey(oi => new { oi.OrderId, oi.ProductId })
+                            .HasForeignKey(oi => oi.OrderId)
+                    //oi => oi
+                    //        .HasKey(oi => new { oi.OrderId, oi.ProductId })
                 );
 
         }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIProject.Migrations
 {
     [DbContext(typeof(ECommerceAContextApp))]
-    [Migration("20230903052158_PKForProductOrders")]
-    partial class PKForProductOrders
+    [Migration("20230903220703_RelBetProductAndOrder")]
+    partial class RelBetProductAndOrder
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -193,6 +193,12 @@ namespace ITIProject.Migrations
 
             modelBuilder.Entity("ITIProject.Models.ProductOrder", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
@@ -202,7 +208,9 @@ namespace ITIProject.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderId", "ProductId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
