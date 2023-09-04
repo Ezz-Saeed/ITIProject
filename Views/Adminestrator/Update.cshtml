@@ -1,11 +1,13 @@
 ﻿@model Product
 @{
     ViewData["Title"] = "Update";
-
-    SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
+    ViewBag.Action = "Update";
+    ViewBag.Id = Model.Id;
+    //SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
 }
 
-<div>
+<partial name="_UpdateAndNewPartialView" />
+@* <div>
     <form method="post" asp-action="Update" asp-controller="Adminestrator">
 
         <div>
@@ -40,4 +42,4 @@
         <br />
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
-</div>
+</div> *@

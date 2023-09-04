@@ -1,15 +1,16 @@
 ﻿@model Product
 @{
-    ViewData["Title"] = "New";
-    ViewBag.Action = "Update";
-    ViewBag.Id = "";
-    //SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
+    ViewData["Title"] = "UpdateAndNew";
+
+    SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
 }
 
-<partial name="_UpdateAndNewPartialView" />
-@* <div>
-    <form method="post" asp-action="NewItem" asp-controller="Adminestrator">
+<div>
+    <form method="post" asp-action=" ViewBag.Action" asp-controller="Adminestrator" asp-route-Id ="ViewBag.Id">
 
+       @*  <div>
+            <input value="@Model.Id" asp-for="Id" class="form-control" hidden />
+        </div> *@
         <div>
             <label asp-for="Name"></label>
             <br />
@@ -37,6 +38,6 @@
 
         <br />
         <br />
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
-</div> *@
+</div>
