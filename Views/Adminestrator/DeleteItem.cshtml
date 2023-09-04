@@ -1,0 +1,42 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete";
+
+    //SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
+   
+}
+
+<div>
+    <form method="post" asp-action="DeleteItem" asp-controller="Adminestrator">
+
+        <div>
+            <label asp-for="Name">: </label>
+           
+            <span>@Model.Name</span>
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <br />
+            <span>@Model.Description</span>
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <br />
+            <span>@Model.Price</span>
+        </div>
+        <div>
+            <label asp-for="Quantity"></label>
+            <br />
+            <span>@Model.Quantity</span>
+        </div>
+        <div>
+            <label asp-for="CategoryId"></label>
+           <br />
+            <span>@ViewBag.category</span>
+        </div>
+
+        <br />
+        <br />
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>

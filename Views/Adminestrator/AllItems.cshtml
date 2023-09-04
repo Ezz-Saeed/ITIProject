@@ -1,0 +1,52 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "AllItems";
+    ECommerceAContextApp _context = new ECommerceAContextApp();
+}
+
+<h1>AllItems</h1>
+
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Category</th>
+            <th></th>
+            <th></th>
+            @* <th></th>
+            <th></th> *@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Description</td>
+                <td>@i.Price</td>
+                <td>@i.Quantity</td>
+                <td>@_context.Categories.Find(i.CategoryId).Name</td>
+                <td><a href="/Adminestrator/Update/@i.Id" class="btn btn-outline-secondary">Update</a></td>
+                <td><a href="/Adminestrator/DeleteItem/@i.Id" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<br />
+<div>
+    <br />
+    <a href="/Adminestrator/NewItem" class="btn btn-outline-success">New Item</a>
+    <br />
+    <br />
+    <a href="/Adminestrator/NewCategory" class="btn btn-outline-success">New Category</a>
+</div>
+

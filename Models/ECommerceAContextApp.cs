@@ -64,7 +64,7 @@ namespace ITIProject.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Adminestrator> Admin { get; set; }
+        public DbSet<Adminestrator> Adminestrator { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
 

@@ -1,0 +1,45 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "New";
+
+    SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
+}
+@* asp-route-id="@Model.Id"
+ *@
+<div>
+    <form method="post" asp-action="NewItem" asp-controller="Adminestrator">
+
+        @* <div>
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-control"  />
+        </div> *@
+        <div>
+            <label asp-for="Name"></label>
+            <br />
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Quantity"></label>
+            <input asp-for="Quantity" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="CategoryId"></label>
+            <br />
+            <select asp-for="CategoryId" asp-items="categories">
+            </select>
+        </div>
+
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

@@ -16,6 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projects\ITIProject
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Projects/ITIProject/Views/Adminestrator/AllItems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxBbGxJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ITIProject/Views/Adminestrator/DeleteItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxEZWxldGVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ITIProject/Views/Adminestrator/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ITIProject/Views/Adminestrator/NewCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxOZXdDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ITIProject/Views/Adminestrator/NewItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxOZXdJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ITIProject/Views/Adminestrator/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5lc3RyYXRvclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/ITIProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

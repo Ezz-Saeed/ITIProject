@@ -1,0 +1,21 @@
+﻿
+
+@model Category
+@{
+    ViewData["Title"] = "NewCategory";
+}
+
+<br />
+<br />
+
+<div>
+    <form asp-action="NewCategory" asp-controller="Adminestrator" >
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
