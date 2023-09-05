@@ -3,14 +3,13 @@
     ViewData["Title"] = "UpdateAndNew";
 
     SelectList categories = new SelectList(ViewBag.categories, "Id", "Name");
+    
 }
 
 <div>
-    <form method="post" asp-action=" ViewBag.Action" asp-controller="Adminestrator" asp-route-Id ="ViewBag.Id">
+    <form method="post" enctype="multipart/form-data" asp-action="@ViewBag.Action" asp-controller="Adminestrator" 
+    asp-route-Id="@ViewBag.Id">
 
-       @*  <div>
-            <input value="@Model.Id" asp-for="Id" class="form-control" hidden />
-        </div> *@
         <div>
             <label asp-for="Name"></label>
             <br />
@@ -21,6 +20,14 @@
             <label asp-for="Description"></label>
             <input asp-for="Description" class="form-control" />
         </div>
+
+        <div class="form-group">
+            <label asp-for="ImagePath"></label>
+            <br />
+            <input asp-file-input type="file" class="form-control"   name="imageFile"/>
+
+        </div>
+
         <div>
             <label asp-for="Price"></label>
             <input asp-for="Price" class="form-control" />
@@ -38,6 +45,6 @@
 
         <br />
         <br />
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
