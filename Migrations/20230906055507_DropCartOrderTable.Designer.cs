@@ -4,6 +4,7 @@ using ITIProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIProject.Migrations
 {
     [DbContext(typeof(ECommerceAContextApp))]
-    partial class ECommerceAContextAppModelSnapshot : ModelSnapshot
+    [Migration("20230906055507_DropCartOrderTable")]
+    partial class DropCartOrderTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,7 +43,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Adminestrator", (string)null);
+                    b.ToTable("Adminestrator");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Cart", b =>
@@ -54,9 +57,12 @@ namespace ITIProject.Migrations
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Carts", (string)null);
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Category", b =>
@@ -73,7 +79,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Customer", b =>
@@ -108,7 +114,7 @@ namespace ITIProject.Migrations
                     b.HasIndex("CartId")
                         .IsUnique();
 
-                    b.ToTable("Customers", (string)null);
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Order", b =>
@@ -133,7 +139,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Product", b =>
@@ -171,7 +177,7 @@ namespace ITIProject.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("ITIProject.Models.ProductOrder", b =>
@@ -181,9 +187,6 @@ namespace ITIProject.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CartId")
-                        .HasColumnType("int");
 
                     b.Property<decimal>("Cost")
                         .HasColumnType("decimal(18,2)");
@@ -199,13 +202,11 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CartId");
-
                     b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductOrders", (string)null);
+                    b.ToTable("ProductOrders");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Customer", b =>
@@ -232,12 +233,6 @@ namespace ITIProject.Migrations
 
             modelBuilder.Entity("ITIProject.Models.ProductOrder", b =>
                 {
-                    b.HasOne("ITIProject.Models.Cart", "Cart")
-                        .WithMany("ProductOrders")
-                        .HasForeignKey("CartId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ITIProject.Models.Order", "Order")
                         .WithMany("ProductOrders")
                         .HasForeignKey("OrderId");
@@ -248,8 +243,6 @@ namespace ITIProject.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Cart");
-
                     b.Navigation("Order");
 
                     b.Navigation("Product");
@@ -258,8 +251,6 @@ namespace ITIProject.Migrations
             modelBuilder.Entity("ITIProject.Models.Cart", b =>
                 {
                     b.Navigation("Customer");
-
-                    b.Navigation("ProductOrders");
                 });
 
             modelBuilder.Entity("ITIProject.Models.Category", b =>

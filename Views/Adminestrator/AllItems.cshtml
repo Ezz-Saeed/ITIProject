@@ -13,6 +13,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
+            <th scope="col"></th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
@@ -29,10 +30,12 @@
             <tr>
                 <td>@i.Id</td>
                 <td>@i.Name</td>
+                <td> <img src="@i.ImagePath" class="card-img-top" alt="Product image" width="4" height="160"></td>
                 <td>@i.Description</td>
                 <td>@i.Price</td>
                 <td>@i.Quantity</td>
                 <td>@_context.Categories.Find(i.CategoryId).Name</td>
+               
                 <td><a href="/Adminestrator/Update/@i.Id" class="btn btn-outline-primary">Update</a></td>
                 <td><a href="/Adminestrator/DeleteItem/@i.Id" class="btn btn-outline-danger">Delete</a></td>
             </tr>

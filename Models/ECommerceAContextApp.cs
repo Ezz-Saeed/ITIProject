@@ -24,22 +24,27 @@ namespace ITIProject.Models
                 .HasForeignKey<Customer>(c => c.CartId);
 
 
-            modelBuilder.Entity<Cart>()
-                .HasMany(c => c.Orders)
-                .WithMany(p => p.Carts)
-                .UsingEntity<CartOrder>
-                (
-                    co => co
-                            .HasOne(ci => ci.Order)
-                            .WithMany(p => p.CartOrders)
-                            .HasForeignKey(ci => ci.OrderId),
-                    co => co
-                            .HasOne(co => co.Cart)
-                            .WithMany(c => c.CartOrders)
-                            .HasForeignKey(co => co.CartId),
-                    ci => ci
-                            .HasKey(co => new { co.OrderId, co.CartId })
-                );
+            //modelBuilder.Entity<Cart>()
+            //    .HasMany(c => c.Orders)
+            //    .WithMany(p => p.Carts)
+            //    .UsingEntity<CartOrder>
+            //    (
+            //        co => co
+            //                .HasOne(ci => ci.Order)
+            //                .WithMany(p => p.CartOrders)
+            //                .HasForeignKey(ci => ci.OrderId),
+            //        co => co
+            //                .HasOne(co => co.Cart)
+            //                .WithMany(c => c.CartOrders)
+            //                .HasForeignKey(co => co.CartId),
+            //        ci => ci
+            //                .HasKey(co => new { co.OrderId, co.CartId })
+            //    );
+
+            //modelBuilder.Entity<Cart>()
+            //    .HasMany(c => c.ProductOrders)
+            //    .WithOne(p => p.Cart)
+            //    .HasForeignKey(p => p.CartId);
 
             modelBuilder.Entity<Order>().
                 HasMany(o => o.Products)

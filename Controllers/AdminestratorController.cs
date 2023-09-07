@@ -91,9 +91,7 @@ namespace ITIProject.Controllers
         [HttpPost]
         //IFormFile imageFile = Request.Form.Files["imageFile"];
         public IActionResult Update(Product product, IFormFile imageFile)
-        {
-            
-             
+        {             
             if (ModelState.IsValid)
             {
                 if (imageFile != null && imageFile.Length > 0)

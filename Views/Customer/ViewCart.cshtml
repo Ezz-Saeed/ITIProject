@@ -1,0 +1,29 @@
+﻿
+@model List<ProductOrder>
+@{
+    ViewData["Title"] = "ViewCart";
+    ECommerceAContextApp _context = new ECommerceAContextApp();
+}
+
+<h1>ViewCart</h1>
+<br />
+<a href="/Customer/MakeOrder/@Model.ToList()" class="btn btn-outline-primary">Make Order</a>
+<br />
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">               
+                <div class="card-body">
+                    <h5 class="card-title">@_context.Products.Find(product.ProductId).Name</h5>
+                    <p class="card-text">@_context.Products.Find(product.ProductId).Description</p>
+                    <p class="card-text">Category: @ViewBag.categories[@_context.Products.Find(product.ProductId).CategoryId-1].Name</p>
+                    <p class="card-text">Quantity: @product.Quantity</p>
+                    <p class="card-text">Price: @product.Cost L.E</p>
+                    <a href="/Customer/RemoveFromCart/@product.Id" class="btn btn-outline-primary">Remove</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
