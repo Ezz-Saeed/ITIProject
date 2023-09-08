@@ -1,0 +1,39 @@
+﻿@using ITIProject.ViewModels;
+
+@model FinalInvoiceViewModel
+@{
+    ViewData["Title"] = "MakeOrder";
+}
+
+<h1>MakeOrder</h1>
+
+<br />
+<h5>Order ID: @Model.OrderId</h5>
+<h5>Cart ID: @Model.CartId</h5>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach(var item in Model.Items)
+            {
+                <tr>
+                <td>@item.ItemName</td>
+                <td></td>
+                <td>@item.ItemQuantity</td>
+                <td>@item.ItemCost L.E</td>
+               </tr>
+            }
+
+    </tbody>
+</table>
+<br />
+<br />
+<h5>Total Cost: @Model.TotalCost</h5>
+<h5>Total Quantity: @Model.TotalQuantity</h5>

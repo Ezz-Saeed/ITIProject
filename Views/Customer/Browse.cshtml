@@ -13,8 +13,10 @@
 <div class="row">
     @foreach (var product in Model)
     {
-        <div class="col-md-4">
-            <div class="card">
+        @if (product.Quantity > 0)
+        {
+            <div class="col-md-4">
+                <div class="card">
                 <img src="@product.ImagePath" class="card-img-top" alt="Product image" width="10"  height="160">
                 <div class="card-body">
                     <h5 class="card-title">@product.Name</h5>
@@ -28,6 +30,7 @@
                 </div>
             </div>
         </div>
+        }
     }
 </div>
 

@@ -4,6 +4,7 @@ using ITIProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIProject.Migrations
 {
     [DbContext(typeof(ECommerceAContextApp))]
-    partial class ECommerceAContextAppModelSnapshot : ModelSnapshot
+    [Migration("20230907225317_NullableProductIdInOder")]
+    partial class NullableProductIdInOder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
