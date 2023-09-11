@@ -8,7 +8,7 @@
 
 <div>
     <form method="post" enctype="multipart/form-data" asp-action="@ViewBag.Action" asp-controller="Adminestrator" 
-    asp-route-Id="@ViewBag.Id">
+    asp-route-Id="@ViewBag.Id" >
 
         <div>
             <label asp-for="Name"></label>
@@ -19,27 +19,31 @@
         <div>
             <label asp-for="Description"></label>
             <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="ImagePath"></label>
             <br />
-            <input asp-file-input type="file" class="form-control"   name="imageFile"/>
-
+            <input asp-for="ImagePath"  type="file" class="form-control"   name="imageFile"/>
+            @* <span asp-validation-for="ImagePath" class="text-danger"></span> *@
         </div>
 
         <div>
             <label asp-for="Price"></label>
             <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
         </div>
         <div>
             <label asp-for="Quantity"></label>
             <input asp-for="Quantity" class="form-control" />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
         </div>
         <div>
             <label asp-for="CategoryId"></label>
             <br />
             <select asp-for="CategoryId" asp-items="categories">
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
             </select>
         </div>
 

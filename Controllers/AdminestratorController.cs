@@ -39,7 +39,9 @@ namespace ITIProject.Controllers
         public IActionResult NewItem(Product product, [FromRoute] int Id)
         {
             IFormFile imageFile = Request.Form.Files["imageFile"];
-            if (product.Name != null)
+            string image = string.Empty;
+
+            if (ModelState.IsValid)
             {
                 if (imageFile != null && imageFile.Length > 0)
                 {
@@ -52,7 +54,9 @@ namespace ITIProject.Controllers
                         imageFile.CopyTo(stream);
                     }
                     product.ImagePath = "/Images/" + fileName;
+                    image = "/Images/" + fileName;
                 }
+                //product.ImagePath = image;
                 _context.Products.Add(product);
                 _context.SaveChanges();
                 return RedirectToAction("AllItems");
@@ -71,7 +75,7 @@ namespace ITIProject.Controllers
         [HttpPost]
         public IActionResult NewCategory(Category category)
         {
-            if(category.Name != null)
+            if(ModelState.IsValid)
             {
                 _context.Categories.Add(category);
                 _context.SaveChanges();
@@ -90,8 +94,9 @@ namespace ITIProject.Controllers
 
         [HttpPost]
         //IFormFile imageFile = Request.Form.Files["imageFile"];
-        public IActionResult Update(Product product, IFormFile imageFile)
-        {             
+        public IActionResult Update(Product product, [FromRoute] int Id/*, [FromRoute] string ImagePath*/)
+        {
+            IFormFile imageFile = Request.Form.Files["imageFile"];
             if (ModelState.IsValid)
             {
                 if (imageFile != null && imageFile.Length > 0)
@@ -106,6 +111,8 @@ namespace ITIProject.Controllers
                     }
                     product.ImagePath = "/Images/" + fileName;
                 }
+                else
+                    product.ImagePath = product.ImagePath;
                 _context.Products.Update(product);
                 _context.SaveChanges();
                 return RedirectToAction("AllItems");
