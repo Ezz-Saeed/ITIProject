@@ -16,7 +16,6 @@ namespace ITIProject.Models
         public string Description { get; set; }
       
         [DisplayName("Image ")]
-        //[Required(ErrorMessage = "Image is required.")]
         public string? ImagePath { get; set; }
         [Required(ErrorMessage ="Price is required.")]
         [DisplayName("Price ")]

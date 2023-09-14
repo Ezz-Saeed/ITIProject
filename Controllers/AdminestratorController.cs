@@ -10,15 +10,29 @@ namespace ITIProject.Controllers
     public class AdminestratorController : Controller
     {
         ECommerceAContextApp _context = new ECommerceAContextApp();
+
         private readonly IWebHostEnvironment _webHostEnvironment ;
-
-
-
         public AdminestratorController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
         }
 
+        [HttpGet]
+        public IActionResult LogIn()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult LogIn(Adminestrator admin)
+        {
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("AllItems");
+            }
+            return View(admin);
+        }
 
         [HttpGet]
         public IActionResult AllItems()
@@ -102,9 +116,7 @@ namespace ITIProject.Controllers
                 if (imageFile != null && imageFile.Length > 0)
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-
                     string filePath = Path.Combine(_webHostEnvironment.WebRootPath, "Images", fileName);
-
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         imageFile.CopyTo(stream);
@@ -117,7 +129,7 @@ namespace ITIProject.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("AllItems");
             }
-            ViewBag.categories = _context.Categories.ToList() ;
+            ViewBag.categories = _context.Categories.ToList();
             return View(product);
         }
 
@@ -139,42 +151,5 @@ namespace ITIProject.Controllers
                 return RedirectToAction("AllItems");
         }
 
-
-
-        //public IActionResult LogIn()
-        //{
-        //    return View(/*_context.Adminestrator.ToList()*/);
-        //}
-
-        //public IActionResult ConfirmAdmin(Adminestrator a, [FromRoute] int id)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            return RedirectToAction("AllItems");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            ModelState.AddModelError("Password", "Wrong Password");
-        //            return RedirectToAction("LogIn",a);
-        //        }
-
-        //    }
-        //    else
-        //        return RedirectToAction("LogIn",a);
-        //}
-
-        //public IActionResult ValidateAdminIdentity(string Password, string Name)
-        //{
-        //    var admin = _context.Adminestrator.FirstOrDefault(a => a.Password == Password && a.Name == Name);
-
-        //    if (admin == null)
-        //    {
-        //        return Json(false);
-        //    }
-        //    else
-        //        return Json(true);
-        //}
     }
 }

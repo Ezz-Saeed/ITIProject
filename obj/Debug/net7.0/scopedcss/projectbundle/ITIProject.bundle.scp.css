@@ -24,6 +24,10 @@ a[b-5czjj1s3a2] {
   border-color: #1861ac;
 }
 
+a[b-5czjj1s3a2] {
+    text-decoration: none;
+}
+
 .border-top[b-5czjj1s3a2] {
   border-top: 1px solid #e5e5e5;
 }

@@ -6,7 +6,6 @@
 
 }
 
-<h1>ViewCart</h1>
 <br />
 <br />
 
@@ -20,10 +19,10 @@
                     <div class="card-body">
                         <h5 class="card-title">@_context.Products.Find(product.ProductId).Name</h5>
                         <p class="card-text">@_context.Products.Find(product.ProductId).Description</p>
-                        <p class="card-text">Category: @ViewBag.categories[@_context.Products.Find(product.ProductId).CategoryId-1].Name</p>
+                        <p class="card-text">Category: @ViewBag.categories[@_context.Products.Find(product.ProductId).CategoryId-9].Name</p>
                         <p class="card-text">Quantity: @product.Quantity</p>
                         <p class="card-text">Price: @product.Cost L.E</p>
-                        <a href="/Customer/RemoveFromCart/@product.Id" class="btn btn-outline-primary">Remove</a>
+                        <a href="/Customer/RemoveFromCart/@product.Id" class="btn btn-outline-primary" id="Delete">Remove</a>
                     </div>
                 </div>
             </div>
@@ -32,8 +31,9 @@
         <br />
         <br />
         <div>
-            <a href="/Customer/MakeOrder/@Model[0].CartId" class="btn btn-outline-primary">Make Order</a>
+            <a href="/Customer/MakeOrder/5" class="btn btn-outline-primary">Make Order</a>
         </div>
     }
 </div>
+<script src="~/js/JavaScript.js"></script>
 

@@ -4,7 +4,6 @@
     ECommerceAContextApp _context = new ECommerceAContextApp();
 }
 
-<h1>AllItems</h1>
 
 <br />
 <br />
@@ -37,7 +36,7 @@
                 <td>@_context.Categories.Find(i.CategoryId).Name</td>
                
                 <td><a href="/Adminestrator/Update/@i.Id" class="btn btn-outline-primary">Update</a></td>
-                <td><a href="/Adminestrator/DeleteItem/@i.Id" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="/Adminestrator/DeleteItem/@i.Id" class="btn btn-outline-danger" id="Delete">Delete</a></td>
             </tr>
         }
 
@@ -52,4 +51,6 @@
     <br />
     <a href="/Adminestrator/NewCategory" class="btn btn-outline-success">New Category</a>
 </div>
+
+
 

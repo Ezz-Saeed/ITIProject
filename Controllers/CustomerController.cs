@@ -7,6 +7,52 @@ namespace ITIProject.Controllers
     public class CustomerController : Controller
     {
         ECommerceAContextApp _context = new ECommerceAContextApp();
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(Customer customer)
+        {
+            if(ModelState.IsValid)
+            {
+                var cart = new Cart();
+                _context.Carts.Add(cart);
+                _context.SaveChanges();
+                customer.CartId = cart.Id;
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
+                return RedirectToAction("LogIn");
+            }
+            return View(customer);
+        }
+
+        public IActionResult AgeValidation(int Age)
+        {
+            if (Age >= 18)
+                return Json(true);
+            return Json(false);
+        }
+
+        [HttpGet]
+        public IActionResult LogIn()
+        {
+            
+            return View();
+        }
+        [HttpPost]
+        public IActionResult LogIn(Customer customer, [FromRoute] int CartId)
+        {
+           
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Browse", new { CartId = CartId });
+            }
+            return View(customer);
+        }
+
         public IActionResult Browse()
         {
             ViewBag.categories = _context.Categories.ToList();   
@@ -16,7 +62,7 @@ namespace ITIProject.Controllers
        public IActionResult ViewCart()
         {
             ViewBag.categories = _context.Categories.ToList();
-            return View(_context.ProductOrders.Where(po => po.CartId == 7).ToList());
+            return View(_context.ProductOrders.Where(po => po.CartId == 5).ToList());
         }
 
 
@@ -75,7 +121,7 @@ namespace ITIProject.Controllers
                 productOrder.Quantity += 1;
                 productOrder.ProductId = Id;
                 productOrder.Cost = productPrice;
-                productOrder.CartId = 7;
+                productOrder.CartId = 5;
                 _context.ProductOrders.Update(productOrder);
 
             }

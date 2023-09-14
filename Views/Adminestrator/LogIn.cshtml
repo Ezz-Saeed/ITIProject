@@ -3,28 +3,27 @@
     ViewData["Title"] = "LogIn";
 }
 
-
-
 <br />
 <br />
-
-
 <div>
-    <form method="post" asp-action="ConfirmAdmin" asp-controller="Adminestrator" asp-route-Id = "Id">
-
+    <form asp-action="LogIn" asp-controller="Adminestrator">
         <div>
             <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control"  />
+            <input asp-for="Name" class="form-control" />
             <span asp-validation-for="Name"></span>
         </div>
         <div>
             <label asp-for="Password"></label>
-            <br />
             <input asp-for="Password" class="form-control" />
             <span asp-validation-for="Password"></span>
         </div>
-  
         <br />
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Log In</button>
     </form>
 </div>
+
+<br />
+<br />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

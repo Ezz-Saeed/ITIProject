@@ -4,10 +4,9 @@
     ViewData["Title"] = "Browse";
 }
 
-<h1>Browse</h1>
 
-@* action="/Customer/AddToCart/@product.Id" *@
-<a href="/Customer/ViewCart" class="btn btn-outline-primary">View Cart</a>
+
+<a asp-action="ViewCart" asp-controller="Customer" class="btn btn-outline-primary">View Cart</a>
 <br />
 <br />
 <div class="row">
@@ -21,15 +20,16 @@
                 <div class="card-body">
                     <h5 class="card-title">@product.Name</h5>
                     <p class="card-text">@product.Description</p>
-                    <p class="card-text">@ViewBag.categories[product.CategoryId-2].Name</p>
+                    <p class="card-text">@ViewBag.categories[product.CategoryId-9].Name</p>
                     <p class="card-text">Price: @product.Price LE</p>
                     <p class="card-text">Quantity: @product.Quantity</p>
-                    <form asp-action="AddToCart" asp-controller="Customer" asp-route-Id="@product.Id">
+                    <form asp-action="AddToCart" asp-controller="Customer" asp-route-Id="@product.Id" >
                         <button value="submit" class="btn btn-outline-primary">Add To Cart</button>
                     </form>
                 </div>
             </div>
         </div>
+        <br />
         }
     }
 </div>

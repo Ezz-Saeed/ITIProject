@@ -34,30 +34,12 @@ namespace ITIProject
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Customer}/{action=LogIn}/{id?}");
 
             app.Run();
         }
 
 
-        //public static IHostBuilder CreateHostBuilder(string[] args) =>
-        //Host.CreateDefaultBuilder(args)
-        //    .ConfigureWebHostDefaults(webBuilder =>
-        //    {
-        //        webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
-        //        {
-        //            config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        //            config.AddEnvironmentVariables();
-        //        });
-
-        //        webBuilder.ConfigureServices((hostingContext, services) =>
-        //        {
-        //            // Services setup
-
-        //            services.AddControllersWithViews();
-        //            services.AddTransient<IService, MyService>();
-        //        });
-        //    });
     }
 
 }

@@ -40,7 +40,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Adminestrator");
+                    b.ToTable("Adminestrator", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Cart", b =>
@@ -56,7 +56,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Carts");
+                    b.ToTable("Carts", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Category", b =>
@@ -74,7 +74,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Customer", b =>
@@ -86,14 +86,15 @@ namespace ITIProject.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -104,12 +105,16 @@ namespace ITIProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CartId")
                         .IsUnique();
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Order", b =>
@@ -134,7 +139,7 @@ namespace ITIProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Product", b =>
@@ -153,7 +158,6 @@ namespace ITIProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -174,7 +178,7 @@ namespace ITIProject.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.ProductOrder", b =>
@@ -208,7 +212,7 @@ namespace ITIProject.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductOrders");
+                    b.ToTable("ProductOrders", (string)null);
                 });
 
             modelBuilder.Entity("ITIProject.Models.Customer", b =>

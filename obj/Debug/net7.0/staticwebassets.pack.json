@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\ITIProject.bundle.scp.css"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\0d64e2d5-d6c5-4422-a5c4-13b9d57c822b.jpg",
+      "PackagePath": "staticwebassets\\Images\\0d64e2d5-d6c5-4422-a5c4-13b9d57c822b.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\1396337f-96e4-45f0-917b-16ac7a43fda8.jpg",
+      "PackagePath": "staticwebassets\\Images\\1396337f-96e4-45f0-917b-16ac7a43fda8.jpg"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\1f4e140b-db77-49ed-bd10-b27625f19b57.png",
       "PackagePath": "staticwebassets\\Images\\1f4e140b-db77-49ed-bd10-b27625f19b57.png"
     },
@@ -13,12 +21,52 @@
       "PackagePath": "staticwebassets\\Images\\241778d0-3653-4229-b70f-69defe300652.jpg"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\2629189a-456e-4163-baff-6d8af8fa6c17.jfif",
+      "PackagePath": "staticwebassets\\Images\\2629189a-456e-4163-baff-6d8af8fa6c17.jfif"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\28d9a282-7630-4160-a943-bcf7ebcb80a8.jpg",
       "PackagePath": "staticwebassets\\Images\\28d9a282-7630-4160-a943-bcf7ebcb80a8.jpg"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\29764f4c-6f08-4fff-830b-8159dcbbfcc9.png",
       "PackagePath": "staticwebassets\\Images\\29764f4c-6f08-4fff-830b-8159dcbbfcc9.png"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\2a59cd33-3bc4-46c0-bd1b-acda9c4f9917.jpg",
+      "PackagePath": "staticwebassets\\Images\\2a59cd33-3bc4-46c0-bd1b-acda9c4f9917.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\2ca54154-c7c2-42da-89f6-20127ff8d764.jfif",
+      "PackagePath": "staticwebassets\\Images\\2ca54154-c7c2-42da-89f6-20127ff8d764.jfif"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\32ab6227-f04d-4c91-bebf-feab0e8e66bf.jpg",
+      "PackagePath": "staticwebassets\\Images\\32ab6227-f04d-4c91-bebf-feab0e8e66bf.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\4fe1e2e7-6e7f-4132-95bb-f9193a2e1ff4.jpg",
+      "PackagePath": "staticwebassets\\Images\\4fe1e2e7-6e7f-4132-95bb-f9193a2e1ff4.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\5676908c-4c20-40ab-94c3-8d336e497ac5.jpg",
+      "PackagePath": "staticwebassets\\Images\\5676908c-4c20-40ab-94c3-8d336e497ac5.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\574d9979-2756-4019-b0cf-6ce81e90f123.jpg",
+      "PackagePath": "staticwebassets\\Images\\574d9979-2756-4019-b0cf-6ce81e90f123.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\5bddd0f7-9fc8-44a5-95a9-b5f592551ab0.jpg",
+      "PackagePath": "staticwebassets\\Images\\5bddd0f7-9fc8-44a5-95a9-b5f592551ab0.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\62770f88-14f1-4ed9-abf7-01b37c4b33a6.jpg",
+      "PackagePath": "staticwebassets\\Images\\62770f88-14f1-4ed9-abf7-01b37c4b33a6.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\63c36c2d-8690-4080-8b6d-d2da8b763a0d.jpg",
+      "PackagePath": "staticwebassets\\Images\\63c36c2d-8690-4080-8b6d-d2da8b763a0d.jpg"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\7a5abd14-b198-42fb-8d50-c1b0a0a70f60.png",
@@ -45,6 +93,10 @@
       "PackagePath": "staticwebassets\\Images\\888219b4-75a6-49c4-a409-b5cda5ccd0e4.png"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\8bf8cf7a-4f15-43a9-a3e1-61eb087e2b2f.jfif",
+      "PackagePath": "staticwebassets\\Images\\8bf8cf7a-4f15-43a9-a3e1-61eb087e2b2f.jfif"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\8df0875c-11c5-4241-9140-7e3a80122328.jfif",
       "PackagePath": "staticwebassets\\Images\\8df0875c-11c5-4241-9140-7e3a80122328.jfif"
     },
@@ -57,12 +109,28 @@
       "PackagePath": "staticwebassets\\Images\\8ea80f04-8df3-4ce6-913e-600a87f079b5.png"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\93707e5f-2551-4f8f-88e3-96c8bbac0b2b.jpg",
+      "PackagePath": "staticwebassets\\Images\\93707e5f-2551-4f8f-88e3-96c8bbac0b2b.jpg"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\94ba304d-0c64-48ca-b68e-d39e9839042b.png",
       "PackagePath": "staticwebassets\\Images\\94ba304d-0c64-48ca-b68e-d39e9839042b.png"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\94bf4c15-befe-44aa-bf06-4c9670378c75.jpg",
       "PackagePath": "staticwebassets\\Images\\94bf4c15-befe-44aa-bf06-4c9670378c75.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\9fb638a7-b827-4ec9-a949-6ed7b2533ccc.jpg",
+      "PackagePath": "staticwebassets\\Images\\9fb638a7-b827-4ec9-a949-6ed7b2533ccc.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\a1dbb301-3abc-4fc4-9f32-6a4828a1dddf.jpg",
+      "PackagePath": "staticwebassets\\Images\\a1dbb301-3abc-4fc4-9f32-6a4828a1dddf.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\a76acd20-4cf3-4322-ad13-4836ee9278e4.jpg",
+      "PackagePath": "staticwebassets\\Images\\a76acd20-4cf3-4322-ad13-4836ee9278e4.jpg"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\a81b0948-541c-48a7-a927-3956ba3ce350.png",
@@ -73,12 +141,32 @@
       "PackagePath": "staticwebassets\\Images\\b38d0100-9b07-4427-9a02-af1c5cd90256.png"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\ba1853a7-255f-427e-a7ca-b0690d463a71.jpg",
+      "PackagePath": "staticwebassets\\Images\\ba1853a7-255f-427e-a7ca-b0690d463a71.jpg"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\ba3497a6-81ff-40ff-8189-74caea230af0.png",
       "PackagePath": "staticwebassets\\Images\\ba3497a6-81ff-40ff-8189-74caea230af0.png"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\bb0c61a3-c342-4709-ac0a-2c15328a500d.jfif",
+      "PackagePath": "staticwebassets\\Images\\bb0c61a3-c342-4709-ac0a-2c15328a500d.jfif"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\cc66b114-de1a-462b-9585-dd0eb107afeb.png",
       "PackagePath": "staticwebassets\\Images\\cc66b114-de1a-462b-9585-dd0eb107afeb.png"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\d69a84d7-e829-465a-93d6-1e16193b15dd.jfif",
+      "PackagePath": "staticwebassets\\Images\\d69a84d7-e829-465a-93d6-1e16193b15dd.jfif"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\d7234610-1451-404d-b0a7-2975f2d41a96.jpg",
+      "PackagePath": "staticwebassets\\Images\\d7234610-1451-404d-b0a7-2975f2d41a96.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\d7e03b7a-1403-47c8-97ac-2994d16391ca.png",
+      "PackagePath": "staticwebassets\\Images\\d7e03b7a-1403-47c8-97ac-2994d16391ca.png"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\d9525cdb-6621-4cea-a0c8-64aafa409d4d.jpg",
@@ -93,6 +181,10 @@
       "PackagePath": "staticwebassets\\Images\\e2030cb3-97c4-4410-946f-1fc7a8fcaa38.jpg"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\e5f78024-e361-4cdf-8e14-45f6af667d3a.jpg",
+      "PackagePath": "staticwebassets\\Images\\e5f78024-e361-4cdf-8e14-45f6af667d3a.jpg"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\e88d692e-8a2c-4d3f-a44d-c5d5b02d9387.png",
       "PackagePath": "staticwebassets\\Images\\e88d692e-8a2c-4d3f-a44d-c5d5b02d9387.png"
     },
@@ -101,8 +193,16 @@
       "PackagePath": "staticwebassets\\Images\\ea398fc6-ef1a-4a30-8c35-044f72b944d9.png"
     },
     {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\fb39ef9c-9877-4998-830c-910a0463435e.jfif",
+      "PackagePath": "staticwebassets\\Images\\fb39ef9c-9877-4998-830c-910a0463435e.jfif"
+    },
+    {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\Images\\fdc92502-d51c-4144-9b20-b55db7c3e954.jpg",
       "PackagePath": "staticwebassets\\Images\\fdc92502-d51c-4144-9b20-b55db7c3e954.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\css\\site.css",
@@ -111,6 +211,10 @@
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\ITIProject\\wwwroot\\js\\JavaScript.js",
+      "PackagePath": "staticwebassets\\js\\JavaScript.js"
     },
     {
       "Id": "D:\\Projects\\ITIProject\\wwwroot\\js\\site.js",
